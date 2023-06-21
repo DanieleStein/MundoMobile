@@ -21,11 +21,11 @@ class HabitListFragment : Fragment() {
 
   private val binding get() = _binding!!
 
-  private lateinit var adapter: HabitListAdapter
+  private lateinit var adapter: HabitListAdapter //o adapter é uma variavel que vamos inicializar depois
 
-  override fun onCreate(savedInstanceState: Bundle?) {
+  override fun onCreate(savedInstanceState: Bundle?) { //Vai ser chamado automaticamente pelo android quando o fragment for criado
     super.onCreate(savedInstanceState)
-    adapter = HabitListAdapter()
+    adapter = HabitListAdapter() //Caso usuario fechar o app, o fragment vai ser distruido, e caso ele retome o app o fragment é recriado
   }
 
   override fun onCreateView(
