@@ -18,13 +18,13 @@ class HabitListAdapter : RecyclerView.Adapter<HabitListAdapter.ViewHolder>() {
 
   private val asyncListDiffer: AsyncListDiffer<HabitItem> = AsyncListDiffer(this, DiffCallback)
 
-  override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
+  override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder { //Vai ser chamado para cada item da nossa lista de hábitos
     val layoutInflater = LayoutInflater.from(parent.context)
     val binding = HabitItemBinding.inflate(layoutInflater, parent, false)
     return ViewHolder(binding)
   }
 
-  override fun onBindViewHolder(holder: ViewHolder, position: Int) {
+  override fun onBindViewHolder(holder: ViewHolder, position: Int) { //Vai ser chamado para cada item da nossa lista de hábitos
     holder.bind(asyncListDiffer.currentList[position])
   }
 

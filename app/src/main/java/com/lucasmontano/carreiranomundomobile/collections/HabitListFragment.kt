@@ -21,14 +21,14 @@ class HabitListFragment : Fragment() {
 
   private val binding get() = _binding!!
 
-  private lateinit var adapter: HabitListAdapter //o adapter é uma variavel que vamos inicializar depois
+  private lateinit var adapter: HabitListAdapter //o adapter é uma variavel que vamos inicializar depois(laiteinit)
 
   override fun onCreate(savedInstanceState: Bundle?) { //Vai ser chamado automaticamente pelo android quando o fragment for criado
-    super.onCreate(savedInstanceState)
+    super.onCreate(savedInstanceState) //Nesse momento a View do Layout onde está o RecyclerView, ainda não foi inflada com os dados
     adapter = HabitListAdapter() //Caso usuario fechar o app, o fragment vai ser distruido, e caso ele retome o app o fragment é recriado
   }
 
-  override fun onCreateView(
+  override fun onCreateView( //Vai criar a View do nosso fragment
     inflater: LayoutInflater, container: ViewGroup?,
     savedInstanceState: Bundle?
   ): View {
@@ -39,13 +39,13 @@ class HabitListFragment : Fragment() {
   override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
     super.onViewCreated(view, savedInstanceState)
     // Set the adapter
-    binding.habitRecyclerView.layoutManager = LinearLayoutManager(requireContext())
-    binding.habitRecyclerView.adapter = adapter
+    binding.habitRecyclerView.layoutManager = LinearLayoutManager(requireContext()) //O layoutManager vai controlar como vamos exibir os itens na tela no recyclerView. E o LinearLayoutManager organiza os itens na tela(lista)
+    binding.habitRecyclerView.adapter = adapter //Conectar o adapter no RecyclerView
 
     // Adding decorations to our recycler view
     addingDividerDecoration()
 
-    // Updating the list of habits
+    // Updating the list of habits (Fornecendo nossa lista de hábitos para o adapter em uma função chamada updateHabits
     adapter.updateHabits(MockHabits.habitItemList)
   }
 

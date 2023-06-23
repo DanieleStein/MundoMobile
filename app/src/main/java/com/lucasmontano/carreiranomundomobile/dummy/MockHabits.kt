@@ -6,9 +6,9 @@ import java.util.*
 /**
  * Mock data with [HabitItem] for the collection.
  */
-object MockHabits {
+object MockHabits { //Nosso objeto com os dados mocados para teste
 
-  val habitItemList: MutableList<HabitItem> = mutableListOf(
+  val habitItemList: MutableList<HabitItem> = mutableListOf(  //Lista mutável de habitos, ela recebe a nossa classe habitList
     HabitItem(
       id = UUID.randomUUID().toString(),
       title = "Read the book",
@@ -43,6 +43,6 @@ object MockHabits {
       id = UUID.randomUUID().toString(),
       title = "Make a cup of coffee",
       isCompleted = false
-    )
+    ),
   )
 }

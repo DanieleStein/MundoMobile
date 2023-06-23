@@ -7,12 +7,15 @@
   android:paddingTop="@dimen/simple_margin"
   android:paddingBottom="@dimen/simple_margin">
 
+//Alteraçoões de layout dos itens da lista
+
   <TextView
     android:id="@+id/titleTextView"
     android:layout_width="0dp"
     android:layout_height="wrap_content"
     android:layout_marginStart="@dimen/horizontal_margin"
     android:layout_marginEnd="@dimen/simple_margin"
+    android:textSize="15dp"
     app:layout_constraintBottom_toBottomOf="parent"
     app:layout_constraintEnd_toStartOf="@+id/completeCheckBox"
     app:layout_constraintStart_toStartOf="parent"
