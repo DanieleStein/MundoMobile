@@ -42,9 +42,7 @@ class HabitListAdapter : RecyclerView.Adapter<HabitListAdapter.ViewHolder>() {
   class ViewHolder(private val binding: HabitItemBinding) : RecyclerView.ViewHolder(binding.root) {
 
     fun bind(habit: HabitItem) {
-      binding.titleTextView.text = habit.posicao
       binding.titleTextView.text = habit.title
-      binding.titleTextView.text = habit.subtitle
       binding.completeCheckBox.isChecked = habit.isCompleted
     }
   }
