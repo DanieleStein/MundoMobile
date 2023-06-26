@@ -4,22 +4,43 @@
   xmlns:tools="http://schemas.android.com/tools"
   android:layout_width="match_parent"
   android:layout_height="wrap_content"
-  android:paddingTop="@dimen/simple_margin"
-  android:paddingBottom="@dimen/simple_margin">
+  android:paddingTop="15dp"
+  android:paddingBottom="15dp">
 
-//Alteraçoões de layout dos itens da lista
+  //Alteraçoões de layout dos itens da lista
+
 
   <TextView
     android:id="@+id/titleTextView"
-    android:layout_width="0dp"
-    android:layout_height="wrap_content"
+    android:layout_width="336dp"
+    android:layout_height="20dp"
     android:layout_marginStart="16dp"
     android:layout_marginEnd="8dp"
+    android:textSize="19dp"
     app:layout_constraintBottom_toBottomOf="parent"
     app:layout_constraintEnd_toStartOf="@+id/completeCheckBox"
+    app:layout_constraintHorizontal_bias="0.0"
     app:layout_constraintStart_toStartOf="parent"
     app:layout_constraintTop_toTopOf="parent"
+    app:layout_constraintVertical_bias="0.238"
     tools:text="Read a book" />
+
+  <TextView
+    android:id="@+id/subtitle"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="16dp"
+    android:layout_marginTop="15dp"
+    android:paddingTop="15dp"
+    android:text="Testando"
+    android:textSize="15dp"
+    android:textColor="@color/fucsia"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintHorizontal_bias="0.0"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="@+id/titleTextView"
+    app:layout_constraintVertical_bias="0.0" />
 
   <CheckBox
     android:id="@+id/completeCheckBox"
