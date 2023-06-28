@@ -9,6 +9,19 @@
 
   //Alteraçoões de layout dos itens da lista
 
+  <ImageView
+    android:id="@+id/image"
+    android:layout_width="34dp"
+    android:layout_height="28dp"
+    android:layout_marginStart="16dp"
+    android:layout_marginTop="5dp"
+    android:layout_marginBottom="4dp"
+    android:src="@drawable/checked"
+    android:textAlignment="@+id/subtitle"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/titleTextView"
+    app:layout_constraintVertical_bias="1.0" />
 
   <TextView
     android:id="@+id/titleTextView"
@@ -22,30 +35,28 @@
     app:layout_constraintHorizontal_bias="0.0"
     app:layout_constraintStart_toStartOf="parent"
     app:layout_constraintTop_toTopOf="parent"
-    app:layout_constraintVertical_bias="0.238"
+    app:layout_constraintVertical_bias="0.308"
     tools:text="Read a book" />
 
   <TextView
     android:id="@+id/subtitle"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:layout_marginStart="16dp"
-    android:layout_marginTop="15dp"
+    android:layout_width="258dp"
+    android:layout_height="43dp"
     android:paddingTop="15dp"
     android:text="Testando"
-    android:textSize="15dp"
     android:textColor="@color/fucsia"
+    android:textSize="16dp"
     app:layout_constraintBottom_toBottomOf="parent"
-    app:layout_constraintEnd_toEndOf="parent"
-    app:layout_constraintHorizontal_bias="0.0"
-    app:layout_constraintStart_toStartOf="parent"
-    app:layout_constraintTop_toTopOf="@+id/titleTextView"
+    app:layout_constraintEnd_toStartOf="@+id/completeCheckBox"
+    app:layout_constraintHorizontal_bias="0.164"
+    app:layout_constraintStart_toEndOf="@+id/image"
+    app:layout_constraintTop_toBottomOf="@+id/titleTextView"
     app:layout_constraintVertical_bias="0.0" />
 
   <CheckBox
     android:id="@+id/completeCheckBox"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
+    android:layout_width="46dp"
+    android:layout_height="48dp"
     android:layout_marginEnd="@dimen/simple_margin"
     app:layout_constraintBottom_toBottomOf="parent"
     app:layout_constraintEnd_toEndOf="parent"
