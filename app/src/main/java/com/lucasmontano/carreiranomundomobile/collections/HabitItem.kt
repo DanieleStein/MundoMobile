@@ -1,5 +1,7 @@
 package com.lucasmontano.carreiranomundomobile.collections
 
+import android.media.Image
+
 /**
  * Habit Model representing an Item in a ListView.
  *
@@ -8,6 +10,7 @@ package com.lucasmontano.carreiranomundomobile.collections
  */
 data class HabitItem(
   val id: String,
+  val image: Int,
   val title: String,
   val subtitle: String,
   val isCompleted: Boolean
