@@ -7,55 +7,50 @@
   android:paddingTop="15dp"
   android:paddingBottom="15dp">
 
-  //Alteraçoões de layout dos itens da lista
-
-  <ImageView
-    android:id="@+id/image"
-    android:layout_width="34dp"
-    android:layout_height="28dp"
+  <Switch
+    android:id="@+id/imageView"
+    android:layout_width="48dp"
+    android:layout_height="48dp"
     android:layout_marginStart="16dp"
-    android:layout_marginTop="5dp"
-    android:layout_marginBottom="4dp"
-    android:src="@drawable/checked"
-    android:textAlignment="@+id/subtitle"
     app:layout_constraintBottom_toBottomOf="parent"
     app:layout_constraintStart_toStartOf="parent"
-    app:layout_constraintTop_toBottomOf="@+id/titleTextView"
-    app:layout_constraintVertical_bias="1.0" />
+    app:layout_constraintTop_toTopOf="parent"
+    app:layout_constraintVertical_bias="0.537" />
 
   <TextView
     android:id="@+id/titleTextView"
-    android:layout_width="336dp"
-    android:layout_height="20dp"
-    android:layout_marginStart="16dp"
+    android:layout_width="189dp"
+    android:layout_height="27dp"
+    android:layout_marginStart="30dp"
     android:layout_marginEnd="8dp"
     android:textSize="19dp"
     app:layout_constraintBottom_toBottomOf="parent"
     app:layout_constraintEnd_toStartOf="@+id/completeCheckBox"
-    app:layout_constraintHorizontal_bias="0.0"
+    app:layout_constraintHorizontal_bias="0.369"
     app:layout_constraintStart_toStartOf="parent"
     app:layout_constraintTop_toTopOf="parent"
-    app:layout_constraintVertical_bias="0.308"
+    app:layout_constraintVertical_bias="0.192"
     tools:text="Read a book" />
 
   <TextView
     android:id="@+id/subtitle"
-    android:layout_width="258dp"
-    android:layout_height="43dp"
+    android:layout_width="189dp"
+    android:layout_height="39dp"
+    android:layout_marginEnd="20dp"
     android:paddingTop="15dp"
     android:text="Testando"
     android:textColor="@color/fucsia"
     android:textSize="16dp"
     app:layout_constraintBottom_toBottomOf="parent"
     app:layout_constraintEnd_toStartOf="@+id/completeCheckBox"
-    app:layout_constraintHorizontal_bias="0.164"
-    app:layout_constraintStart_toEndOf="@+id/image"
+    app:layout_constraintHorizontal_bias="0.534"
+    app:layout_constraintStart_toStartOf="parent"
     app:layout_constraintTop_toBottomOf="@+id/titleTextView"
     app:layout_constraintVertical_bias="0.0" />
 
   <CheckBox
     android:id="@+id/completeCheckBox"
-    android:layout_width="46dp"
+    android:layout_width="48dp"
     android:layout_height="48dp"
     android:layout_marginEnd="@dimen/simple_margin"
     app:layout_constraintBottom_toBottomOf="parent"
