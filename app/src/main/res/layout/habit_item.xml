@@ -7,43 +7,32 @@
   android:paddingTop="15dp"
   android:paddingBottom="15dp">
 
-  <Switch
-    android:id="@+id/imageView"
-    android:layout_width="48dp"
-    android:layout_height="48dp"
-    android:layout_marginStart="16dp"
-    app:layout_constraintBottom_toBottomOf="parent"
-    app:layout_constraintStart_toStartOf="parent"
-    app:layout_constraintTop_toTopOf="parent"
-    app:layout_constraintVertical_bias="0.537" />
-
   <TextView
     android:id="@+id/titleTextView"
-    android:layout_width="189dp"
-    android:layout_height="27dp"
+    android:layout_width="234dp"
+    android:layout_height="28dp"
     android:layout_marginStart="30dp"
     android:layout_marginEnd="8dp"
     android:textSize="19dp"
     app:layout_constraintBottom_toBottomOf="parent"
     app:layout_constraintEnd_toStartOf="@+id/completeCheckBox"
-    app:layout_constraintHorizontal_bias="0.369"
+    app:layout_constraintHorizontal_bias="0.0"
     app:layout_constraintStart_toStartOf="parent"
     app:layout_constraintTop_toTopOf="parent"
-    app:layout_constraintVertical_bias="0.192"
+    app:layout_constraintVertical_bias="0.348"
     tools:text="Read a book" />
 
   <TextView
     android:id="@+id/subtitle"
-    android:layout_width="189dp"
-    android:layout_height="39dp"
-    android:layout_marginEnd="20dp"
-    android:paddingTop="15dp"
+    android:layout_width="253dp"
+    android:layout_height="25dp"
+    android:layout_marginStart="30dp"
     android:text="Testando"
     android:textColor="@color/fucsia"
     android:textSize="16dp"
     app:layout_constraintBottom_toBottomOf="parent"
     app:layout_constraintEnd_toStartOf="@+id/completeCheckBox"
-    app:layout_constraintHorizontal_bias="0.534"
+    app:layout_constraintHorizontal_bias="0.0"
     app:layout_constraintStart_toStartOf="parent"
     app:layout_constraintTop_toBottomOf="@+id/titleTextView"
     app:layout_constraintVertical_bias="0.0" />
