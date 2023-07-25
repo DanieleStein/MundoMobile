@@ -13,7 +13,6 @@ import android.widget.Switch
  */
 data class HabitItem(
   val id: String,
-  val switch: Boolean,
   val title: String,
   val subtitle: String,
   val isCompleted: Boolean
