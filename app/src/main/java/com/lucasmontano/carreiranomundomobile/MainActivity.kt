@@ -22,7 +22,7 @@ class MainActivity : AppCompatActivity() {
     setSupportActionBar(binding.toolbar)
     setupNavigation()
 
-    binding.fab.setOnClickListener { view ->
+    binding.fab.setOnClickListener { view -> //botao de adicionar
       Snackbar
         .make(view, "Add new Habit", Snackbar.LENGTH_LONG)
         .setAction("Add", null)
