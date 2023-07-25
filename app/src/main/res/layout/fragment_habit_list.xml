@@ -6,7 +6,6 @@
   android:layout_height="match_parent"
   tools:context=".collections.HabitListFragment">
 
-  //Layout do fragment, ele tem somente um componente que é o RecyclerView
 
   <androidx.recyclerview.widget.RecyclerView
     android:id="@+id/habitRecyclerView"
