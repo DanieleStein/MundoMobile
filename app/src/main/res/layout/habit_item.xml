@@ -9,33 +9,29 @@
 
   <TextView
     android:id="@+id/titleTextView"
-    android:layout_width="234dp"
-    android:layout_height="28dp"
-    android:layout_marginStart="30dp"
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="16dp"
     android:layout_marginEnd="8dp"
-    android:textSize="19dp"
-    app:layout_constraintBottom_toBottomOf="parent"
+    android:textSize="14dp"
     app:layout_constraintEnd_toStartOf="@+id/completeCheckBox"
-    app:layout_constraintHorizontal_bias="0.0"
     app:layout_constraintStart_toStartOf="parent"
     app:layout_constraintTop_toTopOf="parent"
-    app:layout_constraintVertical_bias="0.348"
     tools:text="Read a book" />
 
   <TextView
-    android:id="@+id/subtitle"
-    android:layout_width="253dp"
-    android:layout_height="25dp"
-    android:layout_marginStart="30dp"
+    android:id="@+id/subtitleTextView"
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="16dp"
+    android:layout_marginEnd="8dp"
     android:text="Testando"
     android:textColor="@color/fucsia"
-    android:textSize="16dp"
+    android:textSize="12dp"
     app:layout_constraintBottom_toBottomOf="parent"
     app:layout_constraintEnd_toStartOf="@+id/completeCheckBox"
-    app:layout_constraintHorizontal_bias="0.0"
     app:layout_constraintStart_toStartOf="parent"
-    app:layout_constraintTop_toBottomOf="@+id/titleTextView"
-    app:layout_constraintVertical_bias="0.0" />
+    app:layout_constraintTop_toBottomOf="@+id/titleTextView" />
 
   <CheckBox
     android:id="@+id/completeCheckBox"

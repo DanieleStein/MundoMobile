@@ -9,11 +9,11 @@ import com.lucasmontano.carreiranomundomobile.R
 /**
  * Item Decoration to add space between items in the recycler view.
  */
-class HabitListItemDecoration(context: Context) : RecyclerView.ItemDecoration() {
+class HabitListItemDecoration(context: Context) : RecyclerView.ItemDecoration() { //Criada uma classe de HabitListItemDecoration que extend de RecyclerView.ItemDecoration()
 
   private val space = context.resources.getDimensionPixelSize(R.dimen.simple_margin)
 
-  override fun getItemOffsets(
+  override fun getItemOffsets( //sobrescrita de metodo configurando todos os espaçamento para 8dp
     outRect: Rect, view: View, parent: RecyclerView,
     state: RecyclerView.State
   ) {
