@@ -6,12 +6,13 @@ import android.text.style.BackgroundColorSpan
 import android.widget.ImageView
 import com.lucasmontano.carreiranomundomobile.R
 import com.lucasmontano.carreiranomundomobile.collections.HabitItem
+import com.lucasmontano.carreiranomundomobile.core.HabitsRepository
 import java.util.*
 
 /**
  * Mock data with [HabitItem] for the collection.
  */
-object MockHabits { //Nosso objeto com os dados mocados para teste
+object MockHabits : HabitsRepository{ //Nosso objeto com os dados mocados para teste, vai estender de HabitRepository(e assim puxar as funções que estão na interface estendida)
 
   val habitItemList: MutableList<HabitItem> = mutableListOf(  //Lista mutável de habitos, ela recebe a nossa classe habitList
     HabitItem(
@@ -57,4 +58,16 @@ object MockHabits { //Nosso objeto com os dados mocados para teste
       isCompleted = false
     ),
   )
+
+  override fun fetchHabits(): List<HabitItem> {
+    TODO("Not yet implemented")
+  }
+
+  override fun addRandomNewHabit() {
+    TODO("Not yet implemented")
+  }
+
+  override fun toggleHabitCompleted(id: String) {
+    TODO("Not yet implemented")
+  }
 }
