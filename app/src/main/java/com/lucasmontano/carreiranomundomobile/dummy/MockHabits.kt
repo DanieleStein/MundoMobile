@@ -12,15 +12,9 @@ import java.util.*
 /**
  * Mock data with [HabitItem] for the collection.
  */
-object MockHabits : HabitsRepository{ //Nosso objeto com os dados mocados para teste, vai estender de HabitRepository(e assim puxar as funções que estão na interface estendida)
+object MockHabits : HabitsRepository{      //Nosso objeto com os dados mocados para teste, vai estender de HabitRepository(e assim puxar as funções que estão na interface estendida)
 
-  val habitItemList: MutableList<HabitItem> = mutableListOf(  //Lista mutável de habitos, ela recebe a nossa classe habitList
-    HabitItem(
-      id = UUID.randomUUID().toString(),
-      title = "Read the book",
-      subtitle = "'Como eu era antes de você'",
-      isCompleted = false
-    ),
+  private val randomHabitList = listOf(
     HabitItem(
       id = UUID.randomUUID().toString(),
       title = "Walk the dog",
@@ -59,15 +53,33 @@ object MockHabits : HabitsRepository{ //Nosso objeto com os dados mocados para t
     ),
   )
 
-  override fun fetchHabits(): List<HabitItem> {
-    TODO("Not yet implemented")
-  }
+  private val habitItemList: MutableList<HabitItem> = mutableListOf( //Lista mutável de habitos, ela recebe a nossa classe habitItem, com as váriaves que compoem a lista
+    HabitItem(
+      id = UUID.randomUUID().toString(),
+      title = "Read the book",
+      subtitle = "'Como eu era antes de você'",
+      isCompleted = false
+    )
+  )
+
+  //sobscrita dos métodos da HabitsRepository
+  override fun fetchHabits() = habitItemList.map { it.copy() }
 
   override fun addRandomNewHabit() {
-    TODO("Not yet implemented")
+    habitItemList.add(randomHabit())
   }
 
   override fun toggleHabitCompleted(id: String) {
-    TODO("Not yet implemented")
+    val habitIndex = findHabitIndexById(id)
+    val habit = habitItemList[habitIndex]
+    habitItemList[habitIndex] = habit.copy(isCompleted = !habit.isCompleted)
+  }
+
+  private fun randomHabit() = randomHabitList.random().copy( //essa função vai pegar randomicamente um hábito que esta acima na nossa lista de hábitos
+    id = UUID.randomUUID().toString()
+  )
+
+  private fun findHabitIndexById(id: String) = habitItemList.indexOfFirst { habitItem ->
+    habitItem.id == id
   }
 }
