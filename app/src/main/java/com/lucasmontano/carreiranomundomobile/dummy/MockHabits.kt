@@ -65,14 +65,14 @@ object MockHabits : HabitsRepository{      //Nosso objeto com os dados mocados p
   //sobscrita dos métodos da HabitsRepository
   override fun fetchHabits() = habitItemList.map { it.copy() }
 
-  override fun addRandomNewHabit() {
+  override fun addRandomNewHabit() { //função que esta adionando um hábito que esta na nosso mock de hábitos, a nossa lista e forma randomica
     habitItemList.add(randomHabit())
   }
 
-  override fun toggleHabitCompleted(id: String) {
+  override fun toggleHabitCompleted(id: String) { //Marcar um hábito como conluído.
     val habitIndex = findHabitIndexById(id)
     val habit = habitItemList[habitIndex]
-    habitItemList[habitIndex] = habit.copy(isCompleted = !habit.isCompleted)
+    habitItemList[habitIndex] = habit.copy(isCompleted = !habit.isCompleted) //pega o state atual, e inverte o valor que esta no momento.
   }
 
   private fun randomHabit() = randomHabitList.random().copy( //essa função vai pegar randomicamente um hábito que esta acima na nossa lista de hábitos
