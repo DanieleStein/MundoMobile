@@ -30,7 +30,7 @@ class HabitListFragment : Fragment() {
 
   override fun onCreate(savedInstanceState: Bundle?) { //Vai ser chamado automaticamente pelo android quando o fragment for criado
     super.onCreate(savedInstanceState) //Nesse momento a View do Layout onde está o RecyclerView, ainda não foi inflada com os dados
-    adapter = HabitListAdapter() //Caso usuario fechar o app, o fragment vai ser distruido, e caso ele retome o app, o fragment é recriado
+    adapter = HabitListAdapter(viewModel) //Caso usuario fechar o app, o fragment vai ser distruido, e caso ele retome o app, o fragment é recriado
   }
 
   override fun onCreateView( //Vai criar a View do nosso fragment
