@@ -25,6 +25,11 @@ class HabitListViewModel(private val repository: HabitsRepository): ViewModel() 
     refreshUiState() //atualizar o UiState, state
   }
 
+  fun toggleHabitCompleted(habitId: String) { //Função para amrcar um hábito como concluído
+    repository.toggleHabitCompleted(habitId)  //chamar repository, marcar um hábito como concluído, passar o id desse hábito
+    refreshUiState()                          //depois dar o refreshUi State da tela
+  }
+
   private fun refreshUiState() { //função para atualizar a lista de dados
     uiState.value?.let { currentUiState ->   //Pegar o valor atual do (uiState)
       uiState.value = currentUiState.copy(   //Então modifica o uiState com uma cópia do atual,
