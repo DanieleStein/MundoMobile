@@ -16,7 +16,7 @@ import com.lucasmontano.carreiranomundomobile.dummy.MockHabits
 /**
  * A [Fragment] that displays a list of habits.
  */
-class HabitListFragment : Fragment() {
+class HabitListFragment : Fragment() { //Nosso Fragment extend o Fragment do Android
 
   private var _binding: FragmentHabitListBinding? = null
 

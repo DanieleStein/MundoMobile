@@ -29,7 +29,7 @@ class HabitListAdapter(private val habitListViewModel: HabitListViewModel) : Rec
     holder.bind(asyncListDiffer.currentList[position])
   }
 
-  override fun getItemCount(): Int = asyncListDiffer.currentList.size + 1 //Simulando um erro, para verificar como corrigir, e como este erro aparece no Logcat
+  override fun getItemCount(): Int = asyncListDiffer.currentList.size //+ 1 //Simulando um erro, para verificar como corrigir, e como este erro aparece no Logcat
 
   /**
    * Updates the list of habits.
