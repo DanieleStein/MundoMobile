@@ -12,12 +12,12 @@ class TestHabitRepository: HabitsRepository{
 
   override fun fetchHabits() = habitList //retorna a lista de hábitos
 
-  override fun addRandomNewHabit() { //No teste podemos adicionar sempre o mesmo item na lista, ou também passar como parametro
+  override fun addHabit(name: String, habitDaySelected: List<Int>) {
+    //TODO implementar o uso do [habitDaySelected]
     habitList.add(
       HabitItem(
         id = UUID.randomUUID().toString(),
-        title = "Habit Test",
-        subtitle = "Performing Test ",
+        title = name,
         isCompleted = false)
     )
   }
