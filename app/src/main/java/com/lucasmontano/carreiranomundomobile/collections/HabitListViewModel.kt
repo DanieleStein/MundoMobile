@@ -20,11 +20,19 @@ class HabitListViewModel(private val repository: HabitsRepository): ViewModel() 
   fun stateOnceAndStream(): LiveData<HabitListUiState> = uiState //função para Expor pro fragment observar!Não expomos a nossa unidade principal(val uiState), pois ela é mutable, e não queremos que o fragment altere o nosso state,
                                                                  //mas que só observe o que esta vindo do ViewmModel, e depois pedir para o ViewModel fazer as modificações no state
 
-  fun addRandomHabit() { //funcao vai ser chamada pela nossa activity, onde esta o botao para adicionar um hábito
-    repository.addRandomNewHabit() //chamando a função que esta no repository
-    refreshUiState() //atualizar o UiState, state
+  /**
+   * Add new Habit
+   * @param name: O nome que queremos dar para este hábito
+   * @param habitDaySelected: Quais os dias que serão realizados aquele hábito
+   */
+  fun addHabit(name: String, habitDaySelected: List<Int>) {
+    repository.addHabit(name, habitDaySelected)
+    refreshUiState()
   }
 
+  /**
+   * Toggle a habit complete status
+   */
   fun toggleHabitCompleted(habitId: String) { //Função para marcar um hábito como concluído
     repository.toggleHabitCompleted(habitId)  //chamar repository, marcar um hábito como concluído, passar o id desse hábito
     refreshUiState()                          //depois dar o refreshUiState da tela
