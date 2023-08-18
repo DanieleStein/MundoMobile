@@ -6,9 +6,8 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
 import com.lucasmontano.carreiranomundomobile.core.HabitsRepository
 
-//Dentro da classe vamos declarar o LiveData que vai ser observado pelo fragment, para conseguir
-//identificar modificações da nossa lista de hábitos (sempre que um dado for alterado, excluído,
-//adicionado, vai fazer com que o fragment observe as mudanças e avise o nosso adapter que vai
+//Dentro da classe vamos declarar o LiveData que vai ser observado pelo fragment, para conseguir identificar modificações da nossa lista de hábitos
+//(sempre que um dado for alterado, excluído, adicionado, vai fazer com que o fragment observe as mudanças e avise o nosso adapter que vai
 //fazer a comunicação com o RecyclerView para atualizar na tela os dados.
 
 class HabitListViewModel(private val repository: HabitsRepository): ViewModel() { //Nossa classe vai estender de ViewModel do Android e nosso repositorio vai importar o repositorio, pois vai precisar para receber os itens
@@ -25,8 +24,8 @@ class HabitListViewModel(private val repository: HabitsRepository): ViewModel() 
    * @param name: O nome que queremos dar para este hábito
    * @param habitDaySelected: Quais os dias que serão realizados aquele hábito
    */
-  fun addHabit(name: String, habitDaySelected: List<Int>) {
-    repository.addHabit(name, habitDaySelected)
+  fun addHabit(name: String, habitDaysSelected: List<Int>) {
+    repository.addHabit(name, habitDaysSelected)
     refreshUiState()
   }
 
