@@ -47,7 +47,6 @@ class HabitListAdapter(private val habitListViewModel: HabitListViewModel) : Rec
 
     fun bind(habit: HabitItem) {
       binding.titleTextView.text = habit.title
-      binding.subtitleTextView.text = habit.subtitle
       binding.completeCheckBox.isChecked = habit.isCompleted
       binding.completeCheckBox.setOnClickListener {  //adicionando um click no checkBox(escutando um click), quando escutar o click, fazer o toggle de marcado para desmarcado, ou de desmarcado para marcado.
         viewModel.toggleHabitCompleted(habit.id)
