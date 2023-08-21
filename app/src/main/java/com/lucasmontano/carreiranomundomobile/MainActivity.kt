@@ -29,7 +29,6 @@ class MainActivity : AppCompatActivity() {
     setupNavigation()
 
     binding.fab.setOnClickListener { view -> //botao de adicionar
-      viewModel.addRandomHabit()
     }
   }
 
