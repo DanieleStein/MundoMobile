@@ -10,7 +10,7 @@ import com.lucasmontano.carreiranomundomobile.core.HabitsRepository
 //(sempre que um dado for alterado, excluído, adicionado, vai fazer com que o fragment observe as mudanças e avise o nosso adapter que vai
 //fazer a comunicação com o RecyclerView para atualizar na tela os dados.
 
-class HabitListViewModel(private val repository: HabitsRepository): ViewModel() { //Nossa classe vai estender de ViewModel do Android e nosso repositorio vai importar o repositorio, pois vai precisar para receber os itens
+class HabitListViewModel(private val repository: HabitsRepository): ViewModel() { //Nossa classe vai extender de ViewModel do Android e nosso repositorio vai importar o repositorio, pois vai precisar para receber os itens
 
   private val uiState: MutableLiveData<HabitListUiState> by lazy {
     MutableLiveData<HabitListUiState>(HabitListUiState(habitItemList = repository.fetchHabits()))
