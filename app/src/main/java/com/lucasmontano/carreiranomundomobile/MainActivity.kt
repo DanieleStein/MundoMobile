@@ -16,9 +16,6 @@ class MainActivity : AppCompatActivity() {
 
   private lateinit var appBarConfiguration: AppBarConfiguration
   private lateinit var binding: ActivityMainBinding
-  private val viewModel: HabitListViewModel by viewModels {
-    HabitListViewModel.Factory(MockHabits)
-  }
 
   override fun onCreate(savedInstanceState: Bundle?) {
     super.onCreate(savedInstanceState)
@@ -27,9 +24,6 @@ class MainActivity : AppCompatActivity() {
     setContentView(binding.root)
     setSupportActionBar(binding.toolbar)
     setupNavigation()
-
-    binding.fab.setOnClickListener { view -> //botao de adicionar (o fab foi para a tela do fragment)
-    }
   }
 
   private fun setupNavigation() {
