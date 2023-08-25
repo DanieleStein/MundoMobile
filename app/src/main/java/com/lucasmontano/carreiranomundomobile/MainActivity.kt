@@ -16,9 +16,6 @@ class MainActivity : AppCompatActivity() {
 
   private lateinit var appBarConfiguration: AppBarConfiguration
   private lateinit var binding: ActivityMainBinding
-  private val viewModel: HabitListViewModel by viewModels {
-    HabitListViewModel.Factory(MockHabits)
-  }
 
   override fun onCreate(savedInstanceState: Bundle?) {
     super.onCreate(savedInstanceState)
