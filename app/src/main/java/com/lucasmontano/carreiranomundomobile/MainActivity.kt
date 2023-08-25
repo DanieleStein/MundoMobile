@@ -27,9 +27,6 @@ class MainActivity : AppCompatActivity() {
     setContentView(binding.root)
     setSupportActionBar(binding.toolbar)
     setupNavigation()
-
-    binding.fab.setOnClickListener { view -> //botao de adicionar (o fab foi para a tela do fragment)
-    }
   }
 
   private fun setupNavigation() {
