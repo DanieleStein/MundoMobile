@@ -7,6 +7,7 @@ import android.view.ViewGroup
 import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.google.android.material.divider.MaterialDividerItemDecoration
 import com.lucasmontano.carreiranomundomobile.R
@@ -57,6 +58,10 @@ class HabitListFragment : Fragment() { //Nosso Fragment extend o Fragment do And
       .observe(viewLifecycleOwner) { state ->   //chamando o metodo observe, e informando até quando ele deve observar (viewLifecycleOwner)enquanto a view existir
         bindUiState(state)
       }
+
+    binding.fab.setOnClickListener {
+      findNavController().navigate() //Navegar para a tela de formulario
+    }
   }
 
   private fun bindUiState(state: HabitListUiState) { //função vai receber o state
