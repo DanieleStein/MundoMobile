@@ -5,4 +5,6 @@
 
   <!-- Content Descriptions and Accessibility Text -->
   <string name="accessibility_add">Adicionar Hábito</string>
+    <string name="title_habit_form">Configurar Habito</string>
+  <string name="habit_title">Titulo do habito</string>
 </resources>
