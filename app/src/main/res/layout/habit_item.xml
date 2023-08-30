@@ -7,18 +7,7 @@
   android:paddingTop="15dp"
   android:paddingBottom="15dp">
 
-  <TextView
-    android:id="@+id/titleTextView"
-    android:layout_width="0dp"
-    android:layout_height="wrap_content"
-    android:layout_marginStart="16dp"
-    android:layout_marginEnd="8dp"
-    android:textSize="14dp"
-    app:layout_constraintEnd_toStartOf="@+id/completeCheckBox"
-    app:layout_constraintStart_toStartOf="parent"
-    app:layout_constraintTop_toTopOf="parent"
-    tools:text="Read a book" />
-
+  <!--
   <TextView
     android:id="@+id/subtitleTextView"
     android:layout_width="0dp"
@@ -32,12 +21,27 @@
     app:layout_constraintStart_toStartOf="parent"
     app:layout_constraintTop_toBottomOf="@+id/titleTextView"
     tools:text="Testando" />
+    -->
+
+  <TextView
+    android:id="@+id/titleTextView"
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="16dp"
+    android:layout_marginTop="16dp"
+    android:layout_marginEnd="8dp"
+    android:textSize="14dp"
+    app:layout_constraintEnd_toStartOf="@+id/completeCheckBox"
+    app:layout_constraintHorizontal_bias="0.0"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent"
+    tools:text="Read a book" />
 
   <CheckBox
     android:id="@+id/completeCheckBox"
     android:layout_width="48dp"
     android:layout_height="48dp"
-    android:layout_marginEnd="@dimen/simple_margin"
+    android:layout_marginEnd="4dp"
     app:layout_constraintBottom_toBottomOf="parent"
     app:layout_constraintEnd_toEndOf="parent"
     app:layout_constraintTop_toTopOf="parent" />
