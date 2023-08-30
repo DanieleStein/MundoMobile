@@ -5,6 +5,14 @@
 
   <!-- Content Descriptions and Accessibility Text -->
   <string name="accessibility_add">Adicionar Hábito</string>
-    <string name="title_habit_form">Configurar Habito</string>
-  <string name="habit_title">Titulo do habito</string>
+  <string name="title_habit_form">Configurar Hábito</string>
+  <string name="habit_title">Título do Hábito</string>
+  <string name="monday">Segunda-Feira</string>
+  <string name="tuesday">Terça-Feira</string>
+  <string name="wednesday">Quarta-Feira</string>
+  <string name="thursday">Quinta-Feira</string>
+  <string name="friday">Sexta-Feira</string>
+  <string name="saturday">Sábado</string>
+  <string name="sunday">Domingo</string>
+  <string name="save">Salvar</string>
 </resources>
