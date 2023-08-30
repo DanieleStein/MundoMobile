@@ -60,7 +60,7 @@ class HabitListFragment : Fragment() { //Nosso Fragment extend o Fragment do And
       }
 
     binding.fab.setOnClickListener {
-      findNavController().navigate() //Navegar para a tela de formulario
+      findNavController().navigate(R.id.action_habitList_to_habitForm) //Navegar para a tela de formulario
     }
   }
 
