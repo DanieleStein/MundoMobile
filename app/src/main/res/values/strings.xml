@@ -15,4 +15,10 @@
   <string name="saturday">Sábado</string>
   <string name="sunday">Domingo</string>
   <string name="save">Salvar</string>
+  <string name="nameapp">Jupiter</string>
+  <string name="buttonAcesso">Entrar</string>
+  <string name="email">Email</string>
+  <string name="senha">Senha</string>
+  <string name="cadastro">Não tem conta? Cadastrar</string>
+  <string name="categoria">Categoria</string>
 </resources>

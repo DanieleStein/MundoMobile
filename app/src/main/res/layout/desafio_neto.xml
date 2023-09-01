@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:tools="http://schemas.android.com/tools"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  android:background="@color/telaNeto"
+  android:textAlignment="center">
+
+
+  <ImageView
+    android:id="@+id/imageView"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="@dimen/vertical_margin"
+    android:layout_marginEnd="@dimen/vertical_margin"
+    android:textAlignment="center"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent"
+    app:layout_constraintVertical_bias="0.332"
+    app:srcCompat="@drawable/ic_launcher_foreground" />
+
+  <EditText
+    android:id="@+id/editTextTextEmailAddress"
+    style="@style/Widget.AppCompat.AutoCompleteTextView"
+    android:layout_width="match_parent"
+    android:layout_height="48dp"
+    android:layout_marginStart="@dimen/vertical_margin"
+    android:layout_marginEnd="@dimen/vertical_margin"
+    android:inputType="textEmailAddress"
+    android:text="@string/email"
+    android:textColor="@color/white"
+    app:layout_constraintBottom_toTopOf="@+id/editTextTextPassword"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/nameapp" />
+
+  <TextView
+    android:id="@+id/nameapp"
+    style="@style/Widget.AppCompat.TextView"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="@dimen/vertical_margin"
+    android:layout_marginTop="332dp"
+    android:layout_marginEnd="@dimen/vertical_margin"
+    android:text="@string/nameapp"
+    android:textAlignment="center"
+    android:textColor="@color/white"
+    android:textSize="60sp"
+    android:textStyle="bold|italic"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent" />
+
+  <TextView
+    android:id="@+id/textViewTextPersonName"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="@dimen/vertical_margin"
+    android:layout_marginEnd="@dimen/vertical_margin"
+    android:text="@string/cadastro"
+    android:textAlignment="center"
+    android:textColor="@color/design_default_color_on_primary"
+    android:textSize="12sp"
+    app:layout_constraintBottom_toTopOf="@+id/buttonAcesso"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/editTextTextPassword" />
+
+  <EditText
+    android:id="@+id/editTextTextPassword"
+    style="@style/Widget.AppCompat.AutoCompleteTextView"
+    android:layout_width="match_parent"
+    android:layout_height="48dp"
+    android:layout_marginStart="@dimen/vertical_margin"
+    android:layout_marginEnd="@dimen/vertical_margin"
+    android:inputType="textPassword"
+    android:text="@string/senha"
+    android:textColor="@color/white"
+    app:layout_constraintBottom_toTopOf="@+id/textViewTextPersonName"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/editTextTextEmailAddress" />
+
+  <Button
+    android:id="@+id/buttonAcesso"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="@dimen/vertical_margin"
+    android:layout_marginTop="8dp"
+    android:layout_marginEnd="@dimen/vertical_margin"
+    android:backgroundTint="@color/waterGreen"
+    android:text="@string/buttonAcesso"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/textViewTextPersonName" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
