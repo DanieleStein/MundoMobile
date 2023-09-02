@@ -4,7 +4,7 @@
   xmlns:tools="http://schemas.android.com/tools"
   android:layout_width="match_parent"
   android:layout_height="match_parent"
-  android:background="@color/telaNeto"
+  android:background="@color/telaNeto2"
   android:textAlignment="center">
 
 
@@ -15,11 +15,11 @@
     android:layout_marginStart="@dimen/vertical_margin"
     android:layout_marginEnd="@dimen/vertical_margin"
     android:textAlignment="center"
-    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintBottom_toTopOf="@+id/nameapp"
     app:layout_constraintEnd_toEndOf="parent"
     app:layout_constraintStart_toStartOf="parent"
     app:layout_constraintTop_toTopOf="parent"
-    app:layout_constraintVertical_bias="0.332"
+    app:layout_constraintVertical_bias="1.0"
     app:srcCompat="@drawable/ic_launcher_foreground" />
 
   <EditText
@@ -47,7 +47,7 @@
     android:layout_marginEnd="@dimen/vertical_margin"
     android:text="@string/nameapp"
     android:textAlignment="center"
-    android:textColor="@color/white"
+    android:textColor="@color/telaNeto3"
     android:textSize="60sp"
     android:textStyle="bold|italic"
     app:layout_constraintEnd_toEndOf="parent"
@@ -89,11 +89,12 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_marginStart="@dimen/vertical_margin"
-    android:layout_marginTop="8dp"
+    android:layout_marginTop="28dp"
     android:layout_marginEnd="@dimen/vertical_margin"
-    android:backgroundTint="@color/waterGreen"
+    android:backgroundTint="@color/telaNeto3"
     android:text="@string/buttonAcesso"
     app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintHorizontal_bias="0.0"
     app:layout_constraintStart_toStartOf="parent"
     app:layout_constraintTop_toBottomOf="@+id/textViewTextPersonName" />
 
